@@ -1,6 +1,15 @@
 <div>
     <x-header>
-    <x-navbar/>
+    <section class="w-full overflow-hidden h-4/6">
+        <x-navbar />
+        <div class="w-full h-full bg-[url('/img/car6.jpeg')] bg-no-repeat bg-cover bg-bottom bg-fixed">
+            <div class="bg-black bg-opacity-60 w-full h-full text-white flex justify-center items-center">
+                <div class="">
+                    <h1 class="text-7xl my-4">Contact Us</h1>
+                </div>
+            </div>
+        </div>
+    </section>
         <div class="h-screen w-full">
             <div class="flex flex-col items-center flex-1 h-full justify-center px-4 sm:px-0 ">
                 <div class="mt-20 flex rounded-lg shadow-lg w-full sm:w-3/4 lg:w-2/3 bg-white sm:mx-0" style="height: 500px">

@@ -17,23 +17,34 @@
 
       <form method="POST" action="{{ route('register') }}">
             @csrf
-        <div class="mb-2">
-          <label class="block text-gray-700">Full Name</label>
-          <input type="email" name="name" id="name" placeholder="Enter Full Name" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" :value="old('name')"  autofocus autocomplete required>
+        <div class="mb-2 flex gap-2">
+          <div class="w-6/12">
+            <label class="block text-gray-700">First Name</label>
+            <input type="text" name="fname" id="fname" placeholder="Enter First Name"
+              class="w-full px-4 py-3 rounded-lg bg-gray-200  border focus:border-blue-500 focus:bg-white focus:outline-none"
+              :value="old('fname')" autofocus autocomplete required>
+          </div>
+          <div class="5/12">
+            <label class="block text-gray-700">Last Name</label>
+            <input type="text" name="lname" id="lname" placeholder="Enter Last Name"
+              class="w-full px-4 py-3 rounded-lg bg-gray-200 border focus:border-blue-500 focus:bg-white focus:outline-none"
+              :value="old('lname')" autocomplete required>
+          </div>
+         
         </div>
         <div class="mb-2">
           <label class="block text-gray-700">Email Address</label>
-          <input type="email" name="email" id="email" placeholder="Enter Email Address" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" :value="old('email')"  autofocus autocomplete required>
+          <input type="email" name="email" id="email" placeholder="Enter Email Address" class="w-full px-4 py-3 rounded-lg bg-gray-200  border focus:border-blue-500 focus:bg-white focus:outline-none" :value="old('email')"  autofocus autocomplete required>
         </div>
 
         <div class="mb-2">
           <label class="block text-gray-700">Password</label>
-          <input type="password" name="password" id="password" placeholder="Enter Password" minlength="6" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
+          <input type="password" name="password" id="password" placeholder="Enter Password" minlength="6" class="w-full px-4 py-3 rounded-lg bg-gray-200  border focus:border-blue-500
                 focus:bg-white focus:outline-none" required>
         </div>
         <div>
           <label class="block text-gray-700">Confirm Password</label>
-          <input type="password" name="password_confirmation" id="password_confirmation" placeholder="Re-Enter Password" minlength="6" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
+          <input type="password" name="password_confirmation" id="password_confirmation" placeholder="Re-Enter Password" minlength="6" class="w-full px-4 py-3 rounded-lg bg-gray-200  border focus:border-blue-500
                 focus:bg-white focus:outline-none" required>
         </div>
 

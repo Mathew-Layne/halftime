@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -24,7 +25,7 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('home', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index']);
 Route::get('about', [HomeController::class, 'aboutUs']);
 Route::get('contact', [HomeController::class, 'getContact']);
 Route::post('contact', [HomeController::class, 'setContact']);
@@ -32,3 +33,6 @@ Route::get('reservation', [HomeController::class, 'getReservation']);
 Route::post('reservation', [HomeController::class, 'setReservation']);
 Route::get('vehicles', [HomeController::class, 'getVehicles']);
 Route::post('vehicles', [HomeController::class, 'setVehicles']);
+
+
+Route::get('/admin/dashboard', [AdminController::class, 'index']);
